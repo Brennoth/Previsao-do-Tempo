@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-image: url(https://picsum.photos/1920/1089?random=1);
+    background-image: url(https://images.unsplash.com/photo-1495757450029-09dbedacbc36?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    padding: 2rem;
+    border-radius: 2.5rem;
+}
+.container > input{
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    background-color: #303236;
+    color: white;
+    padding: 0.8rem;
+    font-size: 1.6em;
+    margin-bottom: 2rem;
+}
+.container > button{
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #303236;
+    border: none;
+    margin-left: 2rem;
+}
+.container > button:hover{
+    cursor: pointer;
+    background-color: #3032369d;
+}
+.container p{
+    font-size: 1.6em;
+    margin-bottom: 1.2rem;
+}
+.container > p:nth-child(3){
+    font-size: 2em;
+}
+
+.container > p:nth-child(4){
+    margin-top: 3rem;
+    font-size: 1.4em;
+}
+.container > p:last-child{
+    margin-top: 3rem;
+}
+.nuvens{
+    display: flex;
+}
+.nuvens p {
+    transform: translateY(15px);
+    text-transform: capitalize;
+}
