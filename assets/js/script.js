@@ -4,7 +4,7 @@ const key = "43c132203ddf36c5755299cfdbbac55f"
 alert("Para garantir o funcionamento da busca, as cidades devem ser escritas com letras maiúsculas e cidades fora do Brasil devem ser digitadas com o nome correto em inglês.")
 const startPrevisãoDoTempo = {
     start(){
-        //isso ira pegar o valor do input quando o btn for clicado
+        //isso ira pegar o valor do input quando o btn for clicado, e ira enviar essa informação para uma outra função
         const btn = document.querySelector("#btn")
         btn.addEventListener("click", () =>{
             const input = document.querySelector("#input-city").value
