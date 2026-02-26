@@ -16,16 +16,20 @@ const startPrevisãoDoTempo = {
     },
     //esse async e para avisar que esssa função esta acessando um servidor
     async buscarCidade(city){
-        // const dados = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&lang=pt_br&units=metric`).then(resposta => resposta.json())
-
-        const dados = await fetch(`https://api.tomorrow.io/v4/weather/realtime?location=${city}&apikey=${key2}`).then(resposta => resposta.json())
+        const dados = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&lang=pt_br&units=metric`).then(resposta => resposta.json())
+        // const dados = await fetch(`https://api.tomorrow.io/v4/weather/realtime?location=${city}&apikey=${key2}`).then(resposta => resposta.json())
         
         this.colocarDadosNaTela(dados)
     },
     colocarDadosNaTela(dados){
     console.log(dados)
-    
-    // document.querySelector("#tempo").innerHTML = `Tempo em ${dados.location.name.split(" ")[0]}`
+    document.querySelector("#tempo").innerHTML = `Tempo em ${dados.name}`
+    document.querySelector("#temperatura").innerHTML = `${parseInt(dados.main.temp)}°C`
+    document.querySelector("#previsão").innerHTML = dados.weather[0].description
+    document.querySelector("#umidade").innerHTML = `Umidade: ${dados.main.humidity}%`
+    document.querySelector(".nuvens img").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`
+        
+    // document.querySelector("#tempo").innerHTML = `Tempo em ${dados.location.name.split(" ")[0, 1]}`
     // document.querySelector("#temperatura").innerHTML = `${parseInt(dados.data.values.temperature)}°C`
     // // document.querySelector("#previsão").innerHTML = dados.weather[0].description
     // document.querySelector("#previsão").innerHTML = dados.data.values.weatherCode
