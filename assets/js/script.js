@@ -2,7 +2,8 @@
 //Chave de api do site OpenWeather
 const key = "43c132203ddf36c5755299cfdbbac55f"
 const key2 = "NioOsw4fKBA34qZG3jSJQLV0pkfmXid2"
-alert("Para garantir o funcionamento da busca, as cidades devem ser escritas com letras maiúsculas e cidades fora do Brasil devem ser digitadas com o nome correto em inglês.")
+    alert("Para garantir o funcionamento da busca, as cidades devem ser escritas com letras maiúsculas e cidades fora do Brasil devem ser digitadas com o nome correto em inglês.")
+    
 const startPrevisãoDoTempo = {
     start(){
         //isso ira pegar o valor do input quando o btn for clicado, e ira enviar essa informação para uma outra função
@@ -32,5 +33,6 @@ const startPrevisãoDoTempo = {
     // document.querySelector(".nuvens img").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`
     } 
 }
-startPrevisãoDoTempo.start()
+    startPrevisãoDoTempo.start()
+    
 })()
