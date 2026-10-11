@@ -16,7 +16,7 @@
         async buscarCidade(city) {
             try {
                 const resposta = await fetch(
-                    `http://localhost:3000/api/clima?cidade=${encodeURIComponent(city)}`
+                    `https://previsao-do-tempo-wzuj.onrender.com/api/clima?cidade=${encodeURIComponent(city)}`
                 );
 
                 const dados = await resposta.json();
